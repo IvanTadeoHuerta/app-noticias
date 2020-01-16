@@ -35,7 +35,7 @@ export class NoticiasService {
 
     this.headLinePage++;
 
-    return this.ejecutarQuery<RespuestaTopHeadlines>('/everything?q=bitcoin&from=2019-12-13&sortBy=publishedAt&page=' + this.headLinePage);
+    return this.ejecutarQuery<RespuestaTopHeadlines>('/top-headlines?country=mx&sortBy=publishedAt&page=' + this.headLinePage);
 
     //return this.http.get<RespuestaTopHeadlines>(`https://newsapi.org/v2/everything?q=bitcoin&from=2019-12-10&sortBy=publishedAt&apiKey=ff6cac1b5b3b40ababc0210cf1080029`);
   }

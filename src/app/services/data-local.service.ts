@@ -21,6 +21,7 @@ export class DataLocalService {
     if( !existe){
       this.noticias.unshift( noticia );
       this.storage.set('favoritos', this.noticias );
+      this.presentToast( 'Agregado a favoritos');
     }
 
   }
@@ -40,7 +41,7 @@ export class DataLocalService {
       this.noticias = favoritos;
     }
 
-    this.presentToast( 'Agregado a favoritos');
+   
 
 
   }
